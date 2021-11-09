@@ -8,7 +8,7 @@ const errors = require('./error-handlers/500.js');
 const logger = require('./middleware/logger.js')
 const tasksRoute = require('./routes/tasks.js');
 
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
 const PORT = process.env.PORT || 3333
 
