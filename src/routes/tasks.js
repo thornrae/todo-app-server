@@ -15,22 +15,33 @@ tasksRouter.get('/tasks', getAllTasks);
 // tasksRouter.put('/tasks/:id', updateTask);
 // tasksRouter.delete('/tasks/:id', deleteTask);
 
-async function getAllTasks (req,res) {
 
-  try {
-    let all = await tasks.get();
-    res.status(200).send(all);
-  }
-  catch(err) {
-    console.log(err);
-  }
-  
-}
+// tasksRouter.get('/tasks', getAllTasks, async(req, res) => {
+//   try {
+//         let all = await tasks.get();
+//         res.status(200).send(all);
+//       }
+//       catch(err) {
+//         console.log(err);
+//       }
+// })
+
 
 // async function getAllTasks (req,res) {
-//   let all = await tasks.get();
-//   res.status(200).send(all);
+
+//   try {
+//     let all = await tasks.get();
+//     res.status(200).send(all);
+//   }
+//   catch(err) {
+//     console.log(err);
+//   }
 // }
+
+async function getAllTasks (req,res) {
+  let all = await tasks.get();
+  res.status(200).json(all);
+}
 
 
 
