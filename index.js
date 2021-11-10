@@ -5,7 +5,7 @@ const server = require('./src/server.js');
 
 const mongoose = require('mongoose');
 
-const MONGODB_URI = 'mongodb://localhost:27017/todoapp';
+const MONGODB_URI = 'mongodb+srv://thornrae:Javascript@cluster0.yx23z.mongodb.net/todoapp?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 3333
 
 const options = { useNewUrlParser: true, useUnifiedTopology: true};
