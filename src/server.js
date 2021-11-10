@@ -10,7 +10,7 @@ const tasksRoute = require('./routes/tasks.js');
 
 // const mongoose = require('mongoose');
 
-const PORT = process.env.PORT || 3333
+// const PORT = process.env.PORT || 3333
 
 app.use(express.json());
 app.use(logger);
@@ -24,7 +24,7 @@ module.exports = {
   app: app,
   start: (port) => {
     app.listen(port, () => {
-      console.log(`listening on port ${PORT}`)
+      console.log(`listening on port ${port}`)
     });
   }
 }
