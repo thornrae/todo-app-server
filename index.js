@@ -10,7 +10,16 @@ const PORT = process.env.PORT || 3333
 
 const options = { useNewUrlParser: true, useUnifiedTopology: true};
 
-mongoose.connect(MONGODB_URI, options)
-  .then(server.start(PORT))
+mongoose
+  .connect(MONGODB_URI, options)
+  .then(() => {
+    server.start(PORT);
+  })
+  .catch(err => {
+    console.log(err);
+  })
 
+// mongoose.connect(MONGODB_URI, options)
+//   .then(server.start(PORT))
+ 
 
