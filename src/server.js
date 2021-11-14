@@ -13,7 +13,7 @@ const tasksRoute = require('./routes/tasks.js');
 // const PORT = process.env.PORT || 3333
 
 const corsOptions = {
-  origin:'http://localhost:3001',
+  origin:'https://todo-app-server-tt.herokuapp.com/tasks',
   credentials: true,
   optionSuccessStatus:200
 }
