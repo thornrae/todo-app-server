@@ -12,10 +12,15 @@ const tasksRoute = require('./routes/tasks.js');
 
 // const PORT = process.env.PORT || 3333
 
+const corsOptions = {
+  credentials:true
+}
+
 app.use(express.json());
 app.use(logger);
 app.use(tasksRoute);
-app.use(cors());
+app.use(cors(corsOptions));
+
 
 app.use('*', notFound);
 
