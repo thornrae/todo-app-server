@@ -13,7 +13,9 @@ const tasksRoute = require('./routes/tasks.js');
 // const PORT = process.env.PORT || 3333
 
 const corsOptions = {
-  credentials:true
+  origin:'http://localhost:3001',
+  credentials: true,
+  optionSuccessStatus:200
 }
 
 app.use(express.json());
