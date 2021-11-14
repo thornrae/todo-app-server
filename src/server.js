@@ -2,7 +2,7 @@
 
 const express = require('express');
 const app = express();
-
+const cors = require('cors');
 const notFound = require('./error-handlers/404.js');
 const errors = require('./error-handlers/500.js');
 const logger = require('./middleware/logger.js')
@@ -15,6 +15,7 @@ const tasksRoute = require('./routes/tasks.js');
 app.use(express.json());
 app.use(logger);
 app.use(tasksRoute);
+app.use(cors());
 
 app.use('*', notFound);
 
